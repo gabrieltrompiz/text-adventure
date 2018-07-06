@@ -3,9 +3,12 @@ package com.gatc.txtadv;
 public class Main {
     public static void main(String[] args){
         Character character = new Body(100);
-        Armor newArmor = Pools.getRandomArmor();
-        System.out.println("Found " + newArmor.getArmorQuality() + " armor with " + newArmor.getArmorHitpoints() + " HP");
-        character = new Armor(character, newArmor);
+        Periquitos newArmor = PeriquitosFactory.getPeriquito("armor");
+        Periquitos newWeapon = PeriquitosFactory.getPeriquito("weapon");
+        System.out.println(newArmor);
+        System.out.println(newWeapon);
+        character = new Armor (character, newArmor.getHitpoints(), newArmor.getQuality());
+        character = new Weapon (character, newWeapon.getAD(), newWeapon.getAS(), newWeapon.getQuality());
         character.setup();
     }
 }
