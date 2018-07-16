@@ -21,6 +21,27 @@ public class Armor extends Periquitos {
     public int getHitpoints(){ return this.armorHitpoints; }
     public String getQuality() { return this.quality; }
 
+    public Character equipOn(Character character) {
+        character = new Armor(character, this.getHitpoints(), this.getQuality());
+        return character;
+    }
+
+    public Character unequipOn(Character character) {
+        if(character.getClass().getSimpleName().equalsIgnoreCase("weapon")) {
+            character = new Weapon(new Body(character.getCurrentHitpoints()), ((Weapon) character).getAD(), ((Weapon) character).getAS(), ((Weapon) character).getQuality());
+            System.out.println("\nUnequipped " + this.getQuality() + " armor.\n");
+        }
+        else {
+            character = new Body(character.getCurrentHitpoints());
+            System.out.println("\nUnequipped " + this.getQuality() + " armor.\n");
+        }
+        return character;
+    }
+
+    public int getCurrentHitpoints() {
+        return super.getCurrentHitpoints();
+    }
+
     public void setup() {
         super.setup();
         System.out.println("Armor: " + this.armorHitpoints + " (" + this.quality.toUpperCase() + ")");
@@ -28,6 +49,6 @@ public class Armor extends Periquitos {
 
     @Override
     public String toString(){
-        return ("Found " + this.getQuality() +  " armor with " + this.getHitpoints() + " HP");
+        return ("Found " + this.getQuality() +  " armor with " + this.getHitpoints() + " HP, want to grab it? (y/n)");
     }
 }

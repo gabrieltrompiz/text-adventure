@@ -11,7 +11,14 @@ abstract class Periquitos implements Character {
     public abstract String getQuality();
     public abstract int  getAD();
     public abstract double getAS();
+    public abstract Character equipOn(Character character);
+    public abstract Character unequipOn(Character character);
+    public String getMe() {
+        return this.getClass().getSimpleName();
+    }
 
+    @Override
+    public int getCurrentHitpoints() { return character.getCurrentHitpoints(); }
     @Override
     public void setup(){ character.setup(); }
 }

@@ -8,7 +8,10 @@ public class Body implements Character {
     }
 
     @Override
+    public int getCurrentHitpoints() { return this.hitpoints; }
+
+    @Override
     public void setup() {
-        System.out.println("Initial hp: " + this.hitpoints);
+        System.out.println("Current HP: " + this.hitpoints);
     }
 }

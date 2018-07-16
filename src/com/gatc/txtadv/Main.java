@@ -1,14 +1,28 @@
 package com.gatc.txtadv;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
+
+        char option;
+        Scanner sc = new Scanner(System.in);
+
         Character character = new Body(100);
-        Periquitos newArmor = PeriquitosFactory.getPeriquito("armor");
-        Periquitos newWeapon = PeriquitosFactory.getPeriquito("weapon");
-        System.out.println(newArmor);
-        System.out.println(newWeapon);
-        character = new Armor (character, newArmor.getHitpoints(), newArmor.getQuality());
-        character = new Weapon (character, newWeapon.getAD(), newWeapon.getAS(), newWeapon.getQuality());
+
+        Boxes box = new Boxes(false,false, false, true, true, false, false);
+        box.getBoxContext();
+        System.out.println(box.getArmor());
+        option = sc.nextLine().charAt(0);
+        if(option == 'y') {
+            character = box.getArmor().equipOn(character);
+        }
+        System.out.println(box.getWeapon());
+        option = sc.nextLine().charAt(0);
+        if(option == 'y') {
+            character = box.getWeapon().equipOn(character);
+        }
         character.setup();
+        sc.close();
     }
 }
