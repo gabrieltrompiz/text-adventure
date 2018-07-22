@@ -1,6 +1,11 @@
 package com.gatc.txtadv;
 
-public interface Character {
-    public void setup();
-    public int getCurrentHitpoints();
+public interface Character extends Visitor {
+    void setup();
+    int getCurrentHitpoints();
+    Armor getCurrentArmor();
+    Weapon getCurrentWeapon();
+    void addToInventory(Object object);
+    void showInventory();
+    void visit(Box box);
 }

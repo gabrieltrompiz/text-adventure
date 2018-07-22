@@ -4,10 +4,13 @@ public class Armor extends Periquitos {
 
     private int armorHitpoints;
     private String quality;
+    private String color;
 
     public Armor (int armorHitpoints, String quality){
         this.armorHitpoints = armorHitpoints;
         this.quality = quality;
+        this.color = this.quality.equalsIgnoreCase("common") ? Colors.green : this.quality.equalsIgnoreCase("rare")
+        ? Colors.blue : this.quality.equalsIgnoreCase("epic") ? Colors.purple : null;
     }
 
     public Armor (Character character, int armorHitpoints, String quality){
@@ -28,7 +31,7 @@ public class Armor extends Periquitos {
 
     public Character unequipOn(Character character) {
         if(character.getClass().getSimpleName().equalsIgnoreCase("weapon")) {
-            character = new Weapon(new Body(character.getCurrentHitpoints()), ((Weapon) character).getAD(), ((Weapon) character).getAS(), ((Weapon) character).getQuality());
+            character = new Weapon(new Body(character.getCurrentHitpoints()), ((Weapon) character).getAD(), ((Weapon) character).getQuality());
             System.out.println("\nUnequipped " + this.getQuality() + " armor.\n");
         }
         else {
@@ -38,6 +41,15 @@ public class Armor extends Periquitos {
         return character;
     }
 
+    @Override
+    public void visit(Box box) {
+
+    }
+
+    public void addToInventory(Object object){ super.addToInventory(object); }
+    public void showInventory() { super.showInventory(); }
+    public Armor getCurrentArmor() { return this; }
+    public Weapon getCurrentWeapon() { return super.getCurrentWeapon(); }
     public int getCurrentHitpoints() {
         return super.getCurrentHitpoints();
     }
@@ -49,6 +61,6 @@ public class Armor extends Periquitos {
 
     @Override
     public String toString(){
-        return ("Found " + this.getQuality() +  " armor with " + this.getHitpoints() + " HP, want to grab it? (y/n)");
+        return (Colors.black + "Armor: " + this.armorHitpoints + color + " (" + this.quality.toUpperCase() + ")" + Colors.reset);
     }
 }

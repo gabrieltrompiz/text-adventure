@@ -18,13 +18,13 @@ public class Pools {
     public static Weapon getRandomWeapon(){
         double odds = (Math.random() * 10) + 1;
         if (odds >= 1 && odds < 6) { //60% chance
-            return new Weapon(getRandomNumber(10, 20), (getRandomNumber(5, 6) / 10.0), "common");
+            return new Weapon(getRandomNumber(10, 20), "common");
         }
         else if (odds >= 6 && odds < 9) { //30%
-            return new Weapon(getRandomNumber(20, 30), (getRandomNumber(7, 8) / 10.0), "rare");
+            return new Weapon(getRandomNumber(20, 30), "rare");
         }
         else if (odds >= 9) { //20%
-            return new Weapon(getRandomNumber(30, 40), (getRandomNumber(9, 10) / 10.0),"epic");
+            return new Weapon(getRandomNumber(30, 40),"epic");
         }
         return null;
     }

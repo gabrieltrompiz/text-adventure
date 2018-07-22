@@ -3,29 +3,28 @@ package com.gatc.txtadv;
 public class Weapon extends Periquitos {
 
     private int attackDmg;
-    private double attackSpeed;
     private String quality;
+    private String color;
 
-    public Weapon(int attackDmg, double attackSpeed, String quality){
+    public Weapon(int attackDmg, String quality){
         this.attackDmg = attackDmg;
-        this.attackSpeed = attackSpeed;
         this.quality = quality;
+        this.color = this.quality.equalsIgnoreCase("common") ? Colors.green : this.quality.equalsIgnoreCase("rare")
+        ? Colors.blue : this.quality.equalsIgnoreCase("epic") ? Colors.purple : null;
     }
 
-    public Weapon(Character character, int attackDmg, double attackSpeed, String quality){
+    public Weapon(Character character, int attackDmg, String quality){
         super(character);
         this.attackDmg = attackDmg;
-        this.attackSpeed = attackSpeed;
         this.quality = quality;
     }
 
     public int getHitpoints() { return 0; }
     public String getQuality() { return this.quality; }
     public int getAD(){ return this.attackDmg; }
-    public double getAS() { return this.attackSpeed; }
 
     public Character equipOn(Character character) {
-        character = new Weapon(character, this.getAD(), this.getAS(), this.getQuality());
+        character = new Weapon(character, this.getAD(), this.getQuality());
         return character;
     }
 
@@ -41,17 +40,26 @@ public class Weapon extends Periquitos {
         return character;
     }
 
+    @Override
+    public void visit(Box box) {
+
+    }
+
+    public void addToInventory(Object object) { super.addToInventory(object); }
+    public void showInventory() { super.showInventory(); }
+    public Armor getCurrentArmor() { return super.getCurrentArmor(); }
+    public Weapon getCurrentWeapon() { return this; }
     public int getCurrentHitpoints() {
         return super.getCurrentHitpoints();
     }
 
     public void setup(){
         super.setup();
-        System.out.println("Weapon: AD: " + this.attackDmg + ", AS: " + this.attackSpeed + " (" + this.quality.toUpperCase() + ")");
+        System.out.println("Weapon: AD: " + this.attackDmg + " (" + this.quality.toUpperCase() + ")");
     }
 
     @Override
     public String toString() {
-        return ("Found " + this.getQuality() + " weapon with " + this.getAD() + " AD and " + this.getAS() + " AS, want to grab it? (y/n)");
+        return (Colors.black + "Weapon: " + this.getAD() + " AD " + color + " (" + this.quality.toUpperCase() + ")" + Colors.reset);
     }
 }
