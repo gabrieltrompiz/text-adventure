@@ -8,6 +8,10 @@ public class Triforce {
         this.type = type;
     }
 
+    public void found() {
+        System.out.println(Colors.yellow + "Found Triforce of " + this.type + "! We're one step closer to stopping Ganon." + Colors.black);
+        System.out.println("Heading now to the next level.");
+    }
     @Override
     public String toString() {
         return Colors.yellow + "Triforce of " + this.type + Colors.black;

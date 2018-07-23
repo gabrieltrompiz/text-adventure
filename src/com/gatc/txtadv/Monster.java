@@ -6,7 +6,7 @@ public class Monster {
 
     public Monster(int level) {
         this.level = level;
-        this.hp = 4 * level;
+        this.hp = 2 * level;
         this.ad = 2 * level;
         this.rupees = rupeesOpt[new Double(Math.floor(Math.random() * rupeesOpt.length)).intValue()];
     }

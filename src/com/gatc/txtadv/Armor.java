@@ -53,6 +53,7 @@ public class Armor extends Periquitos {
     public Weapon getCurrentWeapon() { return super.getCurrentWeapon(); }
     public int getCurrentHitpoints() { return super.getCurrentHitpoints(); }
     public void setCurrentHp(int hp) { super.setCurrentHp(hp); }
+    public int getTriforce() { return super.getTriforce(); }
 
     public void found() {
         System.out.println("Found " + color + this.name + Colors.black + ". Want to grab it? (y/n)");

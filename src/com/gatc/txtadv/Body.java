@@ -5,16 +5,19 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Body implements Character {
-    private int hitpoints;
+    private int hitpoints, maxHitpoints;
     private Scanner sc = new Scanner(System.in);
     private Scanner sc2 = new Scanner(System.in);
     private Armor equippedArmor;
     private Weapon equippedWeapon;
+    private List<Triforce> triforcePieces = new Vector<>();
     private List<Armor> armorInventory = new Vector<>();
     private List<Weapon> weaponInventory = new Vector<>();
+    private List<Consumable> consumableInventory = new Vector<>();
 
     public Body(int hitpoints){
         this.hitpoints = hitpoints;
+        this.maxHitpoints = 12;
         this.equippedWeapon = new Weapon(1, "Fists");
         this.equippedArmor = new Armor(0, "Body");
     }
@@ -45,11 +48,22 @@ public class Body implements Character {
             if(weapon == equippedWeapon) { System.out.print(" (EQUIPPED)"); }
             System.out.print("\n");
         }
+        System.out.println("\n+++ Triforce Pieces [" + this.triforcePieces.size() + "/3] +++");
+        for (Triforce triforce : triforcePieces) {
+            System.out.print(Colors.yellow + triforce);
+            System.out.print(Colors.black + "\n");
+        }
+        System.out.println("\n+++ Consumables [" + this.consumableInventory.size() + "] +++");
+        for (Consumable consumable : consumableInventory) {
+            System.out.print(consumable + " (" + consumable.getQuantity() + ") ");
+            System.out.print("\n");
+        }
         System.out.println(Colors.white + "=== INVENTORY ===" + Colors.black);
-        if (weaponInventory.size() > 0 || armorInventory.size() > 0) {
+        if (weaponInventory.size() > 0 || armorInventory.size() > 0 || consumableInventory.size() > 0) {
             System.out.println("What do you want to do?");
             System.out.println("1. Change armor.");
             System.out.println("2. Change weapon.");
+            System.out.println("3. Use consumable.");
             System.out.println("Any character. Go back.");
             int option = sc2.nextInt();
             if (option == 1) {
@@ -83,6 +97,21 @@ public class Body implements Character {
                 } catch (Exception e) {
                     System.out.println("Invalid weapon option.");
                 }
+            } else if (option == 3) {
+                System.out.println("What consumable do you want to use?");
+                for (Consumable consumable : consumableInventory) {
+                    System.out.print(consumableInventory.indexOf(consumable) + 1 + ". " + consumable + " (" + consumable.getQuantity() + ") ");
+                    System.out.print("\n");
+                }
+                option = sc2.nextInt();
+                try {
+                    if (consumableInventory.get(option - 1).getType().equalsIgnoreCase("potion")) {
+                        character = consumableInventory.get(option - 1).use(character, maxHitpoints);
+                    }
+                }
+                catch (Exception e) {
+                    System.out.println("Invalid consumable option.");
+                }
             }
         }
         return character;
@@ -109,7 +138,7 @@ public class Body implements Character {
                 addToInventory(box.getWeapon());
                 if(weaponInventory.size() == 1) {
                     setEquippedWeapon((Weapon) box.getWeapon());
-                    character = box.getWeapon().equipOn(this);
+                    character = box.getWeapon().equipOn(character);
                 }
                 box.setWeapon(null);
             }
@@ -119,7 +148,51 @@ public class Body implements Character {
             character = this.fight(character, box.getMonster());
             box.setMonster(null);
         }
-        if(box.getArmor() == null && box.getWeapon() == null && box.getMonster() == null) {
+        if(box.getConsumable() != null) {
+            box.getConsumable().found();
+            if(consumableInventory.indexOf(box.getConsumable()) < 0) {
+                consumableInventory.add(box.getConsumable());
+            }
+            else {
+                consumableInventory.get(consumableInventory.indexOf(box.getConsumable())).
+                setQuantity(consumableInventory.get(consumableInventory.indexOf(box.getConsumable())).getQuantity() + box.getConsumable().getQuantity());
+            }
+            box.setConsumable(null);
+        }
+        if(box.getTriforce() != null) {
+            box.getTriforce().found();
+            triforcePieces.add(box.getTriforce());
+            this.maxHitpoints += 8;
+            character.setCurrentHp(this.maxHitpoints);
+        }
+        if(box.getTrap() != null) {
+            box.getTrap().found();
+            for (Consumable consumable : consumableInventory) {
+                if(box.getTrap() != null) {
+                    if (consumable.getType().equalsIgnoreCase(box.getTrap().getNeeded()) && consumable.getQuantity() > 0) {
+                        System.out.println("Want to use consumable? (y/n)");
+                        char option = sc.nextLine().charAt(0);
+                        if (option == 'y') {
+                            consumable.use();
+                            box.setTrap(null);
+                            break;
+                        }
+                        else {
+                            character.setCurrentHp(character.getCurrentHitpoints() - 4);
+                            System.out.println("Lost " + Colors.red + "1 heart due to the trap." + Colors.black);
+                            box.setTrap(null);
+                            break;
+                        }
+                    }
+                }
+            }
+            if(box.getTrap() != null) {
+                character.setCurrentHp(character.getCurrentHitpoints() - 4);
+                System.out.println("Lost " + Colors.red + "1 heart due to the trap." + Colors.black);
+                box.setTrap(null);
+            }
+        }
+        if(box.getArmor() == null && box.getWeapon() == null && box.getMonster() == null && box.getTriforce() == null) {
             System.out.println("There's nothing here. We should keep going.");
         }
         return character;
@@ -149,10 +222,10 @@ public class Body implements Character {
         }while(monster.getHp() > 0);
         if(character.getCurrentHitpoints() > 0) {
             System.out.println("You killed the monster. Lost " + Colors.red + received + Colors.black + " health. Mitigated " +
-                    Colors.cyan + mitigated + Colors.black + " with armor. Done " + Colors.green + done + Colors.black + " damage to monster. \n");
+            Colors.cyan + mitigated + Colors.black + " with armor. Done " + Colors.green + done + Colors.black + " damage to monster. \n");
         }
         else {
-            System.out.println("You died! Lost " + Colors.red + received + Colors.black + " health. GG!");
+            System.out.println("You died! Lost " + Colors.red + received + Colors.black + " health. Mitigated " + Colors.cyan + mitigated + Colors.black + " with armor. GG!");
         }
         return character;
     }
@@ -171,4 +244,7 @@ public class Body implements Character {
 
     @Override
     public void setCurrentHp(int hp) { this.hitpoints = hp; }
+
+    @Override
+    public int getTriforce() { return triforcePieces.size(); }
 }

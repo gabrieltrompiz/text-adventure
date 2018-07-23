@@ -1,14 +1,12 @@
 package com.gatc.txtadv;
 
-import java.util.List;
 import java.util.Scanner;
-import java.util.Vector;
 
 public class Game {
     private Character character;
     private String name;
     private int myRupees, positionX, positionY, level;
-    private Box currentBox, prevBox;
+    private Box currentBox;
     private String[] menu;
     private boolean isGameOver;
     private Scanner sc = new Scanner(System.in);
@@ -17,6 +15,7 @@ public class Game {
         this.character = new Body(12);
         this.positionX = 0;
         this.positionY = 0;
+        this.currentBox = new Box(null, null, null, null, null, null);
         this.myRupees = 0;
         this.level = 1;
         this.isGameOver = false;
@@ -26,6 +25,7 @@ public class Game {
     public void showLore() {
         System.out.println("What should I call you?");
         name = sc.nextLine();
+        name = Colors.green + name + Colors.black;
         System.out.println(Colors.black + "The story begins with a young Hylian boy named " + this.name + " that is 10 years old and lives in a village inhabited by children \n" +
                 "that are watched over by the great Deku tree. " + this.name + " discovers the Deku tree is going to die and in his final moments tells " + this.name + " about an Evil man \n" +
                 "from the Desert who cast a spell on him. " + this.name + " then leaves the village and meets Princess Zelda. She tells him that a man named Ganon is planning to destroy \n" +
@@ -35,11 +35,15 @@ public class Game {
     public void start() {
         String[] fixedMenu = new String[6];
         do {
+            if(character.getTriforce() + 1 != level) {
+                positionX = 0;
+                positionY = 0;
+            }
+            level = character.getTriforce() + 1;
             Map map = Map.getInstance(level);
             currentBox = map.getBox(positionX, positionY);
-            prevBox = currentBox;
             character = currentBox.accept(character);
-            if(character.getCurrentHitpoints() > 0) {
+            if(character.getCurrentHitpoints() > 0 && character.getTriforce() + 1 == level) {
                 System.out.println("Current health: " + Colors.red  + character.getCurrentHitpoints() / 4.0 + " hearts." + Colors.black);
                 System.out.println("What do you want to do, " + this.name + "?");
                 menu = getMenu();
@@ -59,23 +63,31 @@ public class Game {
                 int option = sc.nextInt();
                 switch (fixedMenu[option].toLowerCase()) {
                     case "go forward":
-                        System.out.println("You moved forward. \n");
-                        positionY++;
+                        if(currentBox.getTrap() == null) {
+                            System.out.println("You moved forward. \n");
+                            positionY++;
+                        }
                         break;
 
                     case "go backwards":
-                        System.out.println("You moved backwards. \n");
-                        positionY--;
+                        if(currentBox.getTrap() == null) {
+                            System.out.println("You moved backwards. \n");
+                            positionY--;
+                        }
                         break;
 
                     case "go left":
-                        System.out.println("You moved to the left. \n");
-                        positionX--;
+                        if(currentBox.getTrap() == null) {
+                            System.out.println("You moved to the left. \n");
+                            positionX--;
+                        }
                         break;
 
                     case "go right":
-                        System.out.println("You moved to the right. \n");
-                        positionX++;
+                        if(currentBox.getTrap() == null) {
+                            System.out.println("You moved to the right. \n");
+                            positionX++;
+                        }
                         break;
 
                     case "see inventory":
@@ -90,7 +102,7 @@ public class Game {
                         break;
                 }
             }
-            else {
+            else if (character.getCurrentHitpoints() <= 0){
                 isGameOver = true;
             }
         }while(!isGameOver);

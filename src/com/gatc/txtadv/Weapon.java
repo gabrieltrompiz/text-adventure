@@ -11,7 +11,8 @@ public class Weapon extends Periquitos {
         this.name = name;
         this.color = this.name.equalsIgnoreCase("Kokiri Sword") || this.name.equalsIgnoreCase("White Sword")
         ? Colors.green : this.name.equalsIgnoreCase("Magical Sword") ? Colors.blue :
-        this.name.equalsIgnoreCase("Master Sword") || this.name.equalsIgnoreCase("Biggoron's Sword") ? Colors.purple : null;
+        this.name.equalsIgnoreCase("Master Sword") || this.name.equalsIgnoreCase("Biggoron's Sword")
+        || this.name.contains("Master Sword") ? Colors.purple : null;
     }
 
     public Weapon(Character character, int attackDmg, String name){
@@ -52,6 +53,7 @@ public class Weapon extends Periquitos {
         return super.getCurrentHitpoints();
     }
     public void setCurrentHp(int hp) { super.setCurrentHp(hp); }
+    public int getTriforce() { return super.getTriforce(); }
 
     public void found() {
         System.out.println("Found " + color + this.name + Colors.black + " with " + this.attackDmg + " AD. Want to grab it? (y/n)");

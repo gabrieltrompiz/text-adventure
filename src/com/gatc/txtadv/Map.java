@@ -22,46 +22,81 @@ public class Map {
     }
 
     public void initialize() {
-        int odd = 0;
         if(this.level == 1) {
-            if(odd == 0) {
-                map[0][0] = new Box(null, null, null, null);
-                map[1][0] = new Box(null, null, null, null);
-                map[2][0] = new Box(Factory.getPeriquito("armor"), null, null, null);
-                map[3][0] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[4][0] = new Box(null, null, null, null);
-                map[5][0] = new Box(null, null, null, null);
-                map[0][1] = new Box(null, null, new Monster(level), null);
-                map[1][1] = new Box(null, null, null, null);
-                map[2][1] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[3][1] = new Box(null, null, new Monster(level), null);
-                map[4][1] = new Box(Factory.getPeriquito("armor"), null, null, null);
-                map[5][1] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[0][2] = new Box(null, null, null, null);
-                map[1][2] = new Box(Factory.getPeriquito("armor"), null, null, null);
-                map[2][2] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[3][2] = new Box(null, null, new Monster(level), null);
-                map[4][2] = new Box(null, null, null, null);
-                map[5][2] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[0][3] = new Box(null, null, null, null);
-                map[1][3] = new Box(null, null, null, null);
-                map[2][3] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[3][3] = new Box(null, null, null, null);
-                map[4][3] = new Box(null, Factory.getPeriquito("weapon"), new Monster(level), null);
-                map[5][3] = new Box(null, Factory.getPeriquito("weapon"), null, null);
-                map[0][4] = new Box(null, null, null, null);
-                map[1][4] = new Box(null, null, new Monster(level), null);
-                map[2][4] = new Box(null, null, null, null);
-                map[3][4] = new Box(null, null, new Monster(level), null);
-                map[4][4] = new Box(null, null, null, new Triforce("Power"));
-                map[5][4] = new Box(null, null, new Monster(level), null);
-                map[0][5] = new Box(null, null, null, null);
-                map[1][5] = new Box(null, null, null, null);
-                map[2][5] = new Box(null, null, null, null);
-                map[3][5] = new Box(null, null, null, null);
-                map[4][5] = new Box(Factory.getPeriquito("armor"), null, null, null);
-                map[5][5] = new Box(null, null, null, null);
-            }
+            map[0][0] = new Box(null, null, null, null, null, null);
+            map[1][0] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[2][0] = new Box(Factory.getPeriquito("armor"), null, null, null, null, null);
+            map[3][0] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[4][0] = new Box(null, null, null, null, null, null);
+            map[5][0] = new Box(null, null, null, null, null, null);
+            map[0][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[1][1] = new Box(null, null, null, null, new Consumable("sand rod", 1), null);
+            map[2][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[3][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][1] = new Box(Factory.getPeriquito("armor"), null, null, null, null, null);
+            map[5][1] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[0][2] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[1][2] = new Box(Factory.getPeriquito("armor"), null, null, null, null, null);
+            map[2][2] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[3][2] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][2] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[5][2] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[0][3] = new Box(null, null, null, null, new Consumable("bomb", 2), null);
+            map[1][3] = new Box(null, null, null, null, null, null);
+            map[2][3] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[3][3] = new Box(null, null, null, null, null, null);
+            map[4][3] = new Box(null, Factory.getPeriquito("weapon"), new Monster(level), null, null, null);
+            map[5][3] = new Box(null, Factory.getPeriquito("weapon"), null, null, new Consumable("potion", 1), null);
+            map[0][4] = new Box(null, null, null, null, null, null);
+            map[1][4] = new Box(null, null, new Monster(level), null, null, null);
+            map[2][4] = new Box(null, null, null, null, null, null);
+            map[3][4] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][4] = new Box(null, null, null, new Triforce("Wisdom"), new Consumable("arrow", 5), null);
+            map[5][4] = new Box(null, null, new Monster(level), null, null, new Trap("sand rod"));
+            map[0][5] = new Box(null, null, null, null, null, null);
+            map[1][5] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[2][5] = new Box(null, null, null, null, null, null);
+            map[3][5] = new Box(null, null, null, null, null, null);
+            map[4][5] = new Box(Factory.getPeriquito("armor"), null, null, null, null, new Trap("bomb"));
+            map[5][5] = new Box(null, new Weapon(16, "Master Sword (FIRST UPGRADE)"), null, null, null, null);
+        }
+        if(this.level == 2) {
+            map[0][0] = new Box(null, null, null, null, null, null);
+            map[1][0] = new Box(null, null, null, null, null, new Trap("arrow"));
+            map[2][0] = new Box(Factory.getPeriquito("armor"), null, null, null, null, null);
+            map[3][0] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[4][0] = new Box(null, null, null, null, null, new Trap("arrow"));
+            map[5][0] = new Box(null, new Weapon(20, "Master Sword (SECOND UPGRADE)"), null, null, null, null);
+            map[0][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[1][1] = new Box(null, null, null, null, new Consumable("sand rod", 1), null);
+            map[2][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[3][1] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][1] = new Box(null, null, null, null, null, null);
+            map[5][1] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, new Trap("bomb"));
+            map[0][2] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[1][2] = new Box(Factory.getPeriquito("armor"), null, null, null, null, null);
+            map[2][2] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[3][2] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][2] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[5][2] = new Box(null, null, new Monster(level), null, null, null);
+            map[0][3] = new Box(null, null, null, null, new Consumable("bomb", 2), null);
+            map[1][3] = new Box(null, null, null, null, null, null);
+            map[2][3] = new Box(null, Factory.getPeriquito("weapon"), null, null, null, null);
+            map[3][3] = new Box(null, null, null, null, null, null);
+            map[4][3] = new Box(null, Factory.getPeriquito("weapon"), new Monster(level), null, null, null);
+            map[5][3] = new Box(null, null, null, null, new Consumable("potion", 1), null);
+            map[0][4] = new Box(null, null, null, null, null, null);
+            map[1][4] = new Box(null, null, new Monster(level), null, null, null);
+            map[2][4] = new Box(null, null, null, null, null, null);
+            map[3][4] = new Box(null, null, new Monster(level), null, null, null);
+            map[4][4] = new Box(null, null, null, null, new Consumable("arrow", 5), null);
+            map[5][4] = new Box(null, null, new Monster(level), null, null, new Trap("sand rod"));
+            map[0][5] = new Box(null, null, null, null, null, null);
+            map[1][5] = new Box(null, null, new Monster(level), null, new Consumable("potion", 1), null);
+            map[2][5] = new Box(null, null, null, null, null, null);
+            map[3][5] = new Box(null, null, null, new Triforce("Courage"), null, null);
+            map[4][5] = new Box(Factory.getPeriquito("armor"), null, null, null, null, new Trap("bomb"));
+            map[5][5] = new Box(null, null, new Monster(level), null, null, null);
         }
     }
 

@@ -8,4 +8,5 @@ public interface Character extends Visitor {
     Character showInventory(Character character);
     Character visit(Box box, Character character);
     void setCurrentHp(int hp);
+    int getTriforce();
 }
