@@ -3,64 +3,63 @@ package com.gatc.txtadv;
 public class Armor extends Periquitos {
 
     private int armorHitpoints;
-    private String quality;
+    private String name;
     private String color;
 
-    public Armor (int armorHitpoints, String quality){
+    public Armor (int armorHitpoints, String name){
         this.armorHitpoints = armorHitpoints;
-        this.quality = quality;
-        this.color = this.quality.equalsIgnoreCase("common") ? Colors.green : this.quality.equalsIgnoreCase("rare")
-        ? Colors.blue : this.quality.equalsIgnoreCase("epic") ? Colors.purple : null;
+        this.name = name;
+        this.color = this.name.equalsIgnoreCase("Sacred Shield") || this.name.equalsIgnoreCase("Divine Shield")
+        ? Colors.green : this.name.equalsIgnoreCase("Goddess Shield") || this.name.equalsIgnoreCase("Fortified Shield")
+        ? Colors.blue : this.name.equalsIgnoreCase("Hylian Shield") ? Colors.purple : null;
     }
 
-    public Armor (Character character, int armorHitpoints, String quality){
+    public Armor (Character character, int armorHitpoints, String name){
         super(character);
         this.armorHitpoints = armorHitpoints;
-        this.quality = quality;
+        this.name = name;
     }
 
     public int getAD() { return 0; }
-    public double getAS() { return 0; }
     public int getHitpoints(){ return this.armorHitpoints; }
-    public String getQuality() { return this.quality; }
+    public void setArmorHitpoints(int hp) { this.armorHitpoints = hp; }
+    public String getName() { return this.name; }
 
     public Character equipOn(Character character) {
-        character = new Armor(character, this.getHitpoints(), this.getQuality());
+        character = new Armor(character, this.getHitpoints(), this.getName());
         return character;
     }
 
     public Character unequipOn(Character character) {
         if(character.getClass().getSimpleName().equalsIgnoreCase("weapon")) {
-            character = new Weapon(new Body(character.getCurrentHitpoints()), ((Weapon) character).getAD(), ((Weapon) character).getQuality());
-            System.out.println("\nUnequipped " + this.getQuality() + " armor.\n");
+            character = new Weapon(new Body(character.getCurrentHitpoints()), ((Weapon) character).getAD(), ((Weapon) character).getName());
+            System.out.println("\nUnequipped " + this.getName() + " armor.\n");
         }
         else {
             character = new Body(character.getCurrentHitpoints());
-            System.out.println("\nUnequipped " + this.getQuality() + " armor.\n");
+            System.out.println("\nUnequipped " + this.getName() + " armor.\n");
         }
         return character;
     }
 
     @Override
-    public void visit(Box box) {
-
+    public Character visit(Box box, Character character) {
+        return super.visit(box, character);
     }
 
     public void addToInventory(Object object){ super.addToInventory(object); }
-    public void showInventory() { super.showInventory(); }
+    public Character showInventory(Character character) { return super.showInventory(character); }
     public Armor getCurrentArmor() { return this; }
     public Weapon getCurrentWeapon() { return super.getCurrentWeapon(); }
-    public int getCurrentHitpoints() {
-        return super.getCurrentHitpoints();
-    }
+    public int getCurrentHitpoints() { return super.getCurrentHitpoints(); }
+    public void setCurrentHp(int hp) { super.setCurrentHp(hp); }
 
-    public void setup() {
-        super.setup();
-        System.out.println("Armor: " + this.armorHitpoints + " (" + this.quality.toUpperCase() + ")");
+    public void found() {
+        System.out.println("Found " + color + this.name + Colors.black + ". Want to grab it? (y/n)");
     }
 
     @Override
     public String toString(){
-        return (Colors.black + "Armor: " + this.armorHitpoints + color + " (" + this.quality.toUpperCase() + ")" + Colors.reset);
+        return (color + this.name.toUpperCase() + Colors.black + ": " + this.armorHitpoints + " HP");
     }
 }

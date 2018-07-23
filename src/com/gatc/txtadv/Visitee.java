@@ -1,5 +1,5 @@
 package com.gatc.txtadv;
 
 public interface Visitee {
-    void accept(Visitor v);
+    Character accept(Visitor v);
 }
