@@ -7,14 +7,16 @@ public class Box implements Visitee {
     private Triforce triforce;
     private Consumable consumable;
     private Trap trap;
+    private NPC npc;
 
-    public Box(Periquitos armor, Periquitos weapon, Monster monster, Triforce triforce, Consumable consumable, Trap trap) {
+    public Box(Periquitos armor, Periquitos weapon, Monster monster, Triforce triforce, Consumable consumable, Trap trap, NPC npc) {
         this.armor = armor;
         this.weapon = weapon;
         this.monster = monster;
         this.triforce = triforce;
         this.consumable = consumable;
         this.trap = trap;
+        this.npc = npc;
     }
 
     @Override
@@ -28,6 +30,7 @@ public class Box implements Visitee {
     public Triforce getTriforce() { return  this.triforce; }
     public Consumable getConsumable() { return this.consumable; }
     public Trap getTrap() { return this.trap; }
+    public NPC getNpc() { return this.npc; }
 
     public void setArmor(Periquitos armor) { this.armor = armor; }
     public void setWeapon(Periquitos weapon) { this.weapon = weapon; }

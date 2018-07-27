@@ -18,5 +18,8 @@ public class Trap {
         if(needed.equalsIgnoreCase("arrow")) {
             System.out.println("The path is closed. There are eye targets. You need to shoot them with arrows to keep going.");
         }
+        if(needed.equalsIgnoreCase("boomerang")) {
+            System.out.println("You must hit various targets at the same time. You need a boomerang to keep going");
+        }
     }
 }

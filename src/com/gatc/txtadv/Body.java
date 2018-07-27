@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Body implements Character {
-    private int hitpoints, maxHitpoints;
+    private int hitpoints, maxHitpoints, rupees;
     private Scanner sc = new Scanner(System.in);
     private Scanner sc2 = new Scanner(System.in);
     private Armor equippedArmor;
@@ -18,6 +18,7 @@ public class Body implements Character {
     public Body(int hitpoints){
         this.hitpoints = hitpoints;
         this.maxHitpoints = 12;
+        this.rupees = 0;
         this.equippedWeapon = new Weapon(1, "Fists");
         this.equippedArmor = new Armor(0, "Body");
     }
@@ -35,6 +36,7 @@ public class Body implements Character {
     @Override
     public Character showInventory(Character character){
         System.out.println(Colors.white + "=== INVENTORY ===" + Colors.black);
+        System.out.println("Rupees: " + Colors.yellow + this.rupees + Colors.black);
         System.out.println("+++ Armors [" + this.armorInventory.size() + "] +++");
         for (Armor armor : armorInventory) {
             System.out.print(armor);
@@ -192,7 +194,28 @@ public class Body implements Character {
                 box.setTrap(null);
             }
         }
-        if(box.getArmor() == null && box.getWeapon() == null && box.getMonster() == null && box.getTriforce() == null) {
+        if(box.getNpc() != null) {
+            Scanner sc3 = new Scanner(System.in);
+            System.out.println("There's a marketer. You can talk to him.");
+            int opt;
+            do {
+                box.getNpc().showStock();
+                System.out.println("Your rupees: " + Colors.green + this.rupees + Colors.black);
+                System.out.println("What do you want to buy?");
+                opt = sc3.nextInt();
+                if(box.getNpc().getConsumable(opt -1) != null) {
+                    if (box.getNpc().canIBuy(box.getNpc().getConsumable(opt - 1), this.rupees)) {
+                        consumableInventory.add(box.getNpc().getConsumable(opt - 1));
+                        this.rupees -= box.getNpc().getConsumable(opt - 1).getPrice();
+                        break;
+                    } else {
+                        System.out.println("Cannot buy it.");
+                    }
+                }
+                else { break; }
+            }while(opt != 0);
+        }
+        if(box.getArmor() == null && box.getWeapon() == null && box.getMonster() == null && box.getTriforce() == null && box.getNpc() == null) {
             System.out.println("There's nothing here. We should keep going.");
         }
         return character;
@@ -213,18 +236,25 @@ public class Body implements Character {
                         character.setCurrentHp(character.getCurrentHitpoints() + equippedArmor.getHitpoints());
                         equippedArmor.setArmorHitpoints(0);
                     }
-                }
-                else {
+                } else {
                     character.setCurrentHp(character.getCurrentHitpoints() - monster.getAd());
                     received += monster.getAd() / 4.0;
                 }
             }
-        }while(monster.getHp() > 0);
-        if(character.getCurrentHitpoints() > 0) {
-            System.out.println("You killed the monster. Lost " + Colors.red + received + Colors.black + " health. Mitigated " +
-            Colors.cyan + mitigated + Colors.black + " with armor. Done " + Colors.green + done + Colors.black + " damage to monster. \n");
-        }
-        else {
+        } while (monster.getHp() > 0);
+        if (character.getCurrentHitpoints() > 0) {
+            if (monster.getLevel() <= 3) {
+                System.out.println("You killed the monster. Lost " + Colors.red + received + Colors.black + " health. Mitigated " +
+                        Colors.cyan + mitigated + Colors.black + " with armor. Done " + Colors.green + done + Colors.black + " damage to monster. \n");
+                this.rupees += monster.getRupees();
+            }
+            else {
+                System.out.println("You killed " + Colors.purple + " Ganon" + Colors.black + "! Hyrule is finally free. GG!");
+                System.out.println("Lost " + Colors.red + received + Colors.black + " health. Mitigated " +
+                Colors.cyan + mitigated + Colors.black + " with armor. Done " + Colors.green + done + Colors.black + " damage to " +
+                Colors.purple + "Ganon");
+            }
+        } else {
             System.out.println("You died! Lost " + Colors.red + received + Colors.black + " health. Mitigated " + Colors.cyan + mitigated + Colors.black + " with armor. GG!");
         }
         return character;
@@ -247,4 +277,7 @@ public class Body implements Character {
 
     @Override
     public int getTriforce() { return triforcePieces.size(); }
+
+    @Override
+    public int getRupees() { return rupees; }
 }

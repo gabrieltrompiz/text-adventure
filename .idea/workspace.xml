@@ -2,29 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cdfcde5-6c1d-4f35-bb7b-143391421991" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Armor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Body.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Body.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Box.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Character.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Map$MapSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Map$MapSingleton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Periquitos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Periquitos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Triforce.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Triforce.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Weapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Trap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/gatc/txtadv/Trap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Body.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Body.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Periquitos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Periquitos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Triforce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Triforce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gatc/txtadv/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gatc/txtadv/Weapon.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,33 +32,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Weapon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Weapon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Trap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java">
+      <file leaf-file-name="Armor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-              <folding>
-                <element signature="e#145#146#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="865">
+              <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Visitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -71,8 +62,8 @@
       <file leaf-file-name="Body.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Body.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+            <state relative-caret-position="3587">
+              <caret line="211" column="61" lean-forward="true" selection-start-line="211" selection-start-column="61" selection-end-line="211" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,35 +74,31 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java">
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="119">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Box.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Box.java">
+      <file leaf-file-name="NPC.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="68" column="82" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
+            <state relative-caret-position="143">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#165#166#0" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,21 +106,26 @@
       <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java">
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-146">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pools.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Pools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -178,21 +170,21 @@
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Visitee.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Visitor.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Pools.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Triforce.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Consumables.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Character.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Periquitos.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Triforce.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Consumables.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Box.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Body.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Map.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Game.java" />
         <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Box.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Map.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Body.java" />
+        <option value="$PROJECT_DIR$/src/com/gatc/txtadv/Game.java" />
       </list>
     </option>
   </component>
@@ -365,12 +357,12 @@
       <workItem from="1531402249185" duration="4505000" />
       <workItem from="1531520442232" duration="4289000" />
       <workItem from="1531697618946" duration="2470000" />
-      <workItem from="1531758001828" duration="52706000" />
+      <workItem from="1531758001828" duration="61425000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86215000" />
+    <option name="totallyTimeSpent" value="94934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -397,7 +389,7 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49934897" weight="0.32551724" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49934897" weight="0.5696552" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.125" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32965517" />
@@ -425,13 +417,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Pools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -638,31 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Visitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Visitee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Periquitos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -677,35 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="55" column="59" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
-          <folding>
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Pools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Trap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="357">
+          <caret line="21" column="116" selection-start-line="21" selection-start-column="116" selection-end-line="21" selection-end-column="116" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
             <element signature="e#180#181#0" expanded="true" />
@@ -713,73 +652,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Boss.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Periquitos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="68" column="82" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="513">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="918">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Consumable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="88" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/NPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Armor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="865">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Body.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+        <state relative-caret-position="3587">
+          <caret line="211" column="61" lean-forward="true" selection-start-line="211" selection-start-column="61" selection-end-line="211" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="-146">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gatc/txtadv/Pools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
         </state>
       </provider>
     </entry>

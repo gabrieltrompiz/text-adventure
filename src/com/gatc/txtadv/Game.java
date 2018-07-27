@@ -15,7 +15,7 @@ public class Game {
         this.character = new Body(12);
         this.positionX = 0;
         this.positionY = 0;
-        this.currentBox = new Box(null, null, null, null, null, null);
+        this.currentBox = new Box(null, null, null, null, null, null, null);
         this.myRupees = 0;
         this.level = 1;
         this.isGameOver = false;
@@ -33,7 +33,7 @@ public class Game {
     }
 
     public void start() {
-        String[] fixedMenu = new String[6];
+        String[] fixedMenu = new String[7];
         do {
             if(character.getTriforce() + 1 != level) {
                 positionX = 0;
@@ -43,7 +43,7 @@ public class Game {
             Map map = Map.getInstance(level);
             currentBox = map.getBox(positionX, positionY);
             character = currentBox.accept(character);
-            if(character.getCurrentHitpoints() > 0 && character.getTriforce() + 1 == level) {
+            if(character.getCurrentHitpoints() > 0 && character.getTriforce() + 1 == level && level <= 3) {
                 System.out.println("Current health: " + Colors.red  + character.getCurrentHitpoints() / 4.0 + " hearts." + Colors.black);
                 System.out.println("What do you want to do, " + this.name + "?");
                 menu = getMenu();
@@ -94,6 +94,9 @@ public class Game {
                         character = character.showInventory(character);
                         break;
 
+                    case "visit marketer":
+                        break;
+
                     case "exit":
                         System.exit(0);
 
@@ -103,6 +106,9 @@ public class Game {
                 }
             }
             else if (character.getCurrentHitpoints() <= 0){
+                isGameOver = true;
+            }
+            else if (level == 4) {
                 isGameOver = true;
             }
         }while(!isGameOver);
@@ -153,13 +159,20 @@ public class Game {
         return true;
     }
 
+    public boolean isThereANPC() {
+        Map map = Map.getInstance(level);
+        if (map.getBox(positionX, positionY).getNpc() != null) { return true; }
+        return false;
+    }
+
     public String[] getMenu() {
-        String[] menuHelper = new String[6];
+        String[] menuHelper = new String[7];
         menuHelper[1] = canIGoForward() ? "Go forward" : null;
         menuHelper[2] = canIGoBackwards() ? "Go backwards" : null;
         menuHelper[3] = canIGoLeft() ? "Go left" : null;
         menuHelper[4] = canIGoRight() ? "Go right" : null;
-        menuHelper[5] = "See inventory";
+        menuHelper[5] = isThereANPC() ? "Visit marketer" : null;
+        menuHelper[6] = "See inventory";
         menuHelper[0] = "Exit";
         return menuHelper;
     }

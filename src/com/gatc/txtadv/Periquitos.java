@@ -33,4 +33,6 @@ abstract class Periquitos implements Character, Visitor {
     public void setCurrentHp(int hp) { character.setCurrentHp(hp); }
     @Override
     public int getTriforce() { return character.getTriforce(); }
+    @Override
+    public int getRupees() { return character.getRupees(); }
 }

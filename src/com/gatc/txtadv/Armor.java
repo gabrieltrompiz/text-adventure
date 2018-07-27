@@ -54,6 +54,7 @@ public class Armor extends Periquitos {
     public int getCurrentHitpoints() { return super.getCurrentHitpoints(); }
     public void setCurrentHp(int hp) { super.setCurrentHp(hp); }
     public int getTriforce() { return super.getTriforce(); }
+    public int getRupees() { return super.getRupees(); }
 
     public void found() {
         System.out.println("Found " + color + this.name + Colors.black + ". Want to grab it? (y/n)");
