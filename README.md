@@ -11,7 +11,7 @@
 * [Credits](#credits)
 
 ## About this project
-This project was developer for Object Oriented Programming class, back in 2018. We were supposed to develop a text adventure using at least one creational design pattern, one behavioral design pattern and one structural design pattern. In this project the design patterns used were Singleton, Factory and Builder.
+This project was developed for Object Oriented Programming class, back in 2018. We were supposed to develop a text adventure using at least one creational design pattern, one behavioral design pattern and one structural design pattern. In this project the design patterns used were Singleton, Factory and Builder.
 
 ## Game elements
 * A character, with a base HP of 3 hearts.
