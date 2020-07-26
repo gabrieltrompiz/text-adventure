@@ -29,25 +29,25 @@ This project was developer for Object Oriented Programming class, back in 2018. 
 
 ## Screenshots
 #### Main Menu
-![Menu](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/main-menu.jpg)
+![Menu](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/main-menu.PNG)
 
 #### Fighting Monsters
-![Fighting Monsters](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/fighting-monsters.jpg)
+![Fighting Monsters](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/fighting-monsters.PNG)
 
 #### Finding Objects
-![Finding Objects](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/finding-objects.jpg)
+![Finding Objects](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/finding-objects.PNG)
 
 #### Finding Weapon
-![Finding Weapon](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/finding-weapon.jpg)
+![Finding Weapon](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/finding-weapon.PNG)
 
 #### Inventory
-![Inventory](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/inventory.jpg)
+![Inventory](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/inventory.PNG)
 
 #### NPCs
-![NPCs](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/NPCs.jpg)
+![NPCs](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/NPCs.PNG)
 
 #### Moving to next level
-![Moving to next level](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/screenshots/finding-triforce.jpg)
+![Moving to next level](https://raw.githubusercontent.com/gabrieltrompiz/text-adventure/master/img/finding-triforce.PNG)
 
 ## Credits
 This project was developed by Gabriel Trompiz: [@gabrieltrompiz](https://github.com/gabrieltrompiz).
